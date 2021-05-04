@@ -44,10 +44,10 @@ export class UserService {
   display(id:any){
     return this.http.get('http://localhost:3000/userinfo/'+id);
   }
-  updateUser(id:any,updatedData:User)
-  {
-    return this.http.put('http://localhost:3000/update/'+id,updatedData);
-  }
+  // updateUser(id:any,updatedData:User)
+  // {
+  //   return this.http.put('http://localhost:3000/update/'+id,updatedData);
+  // }
 
 
   //to add product
