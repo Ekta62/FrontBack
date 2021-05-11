@@ -1,10 +1,11 @@
 import { Route } from '@angular/compiler/src/core';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogoutComponent } from '../logout/logout.component';
 import { AuthGuard } from '../shared/auth.guard';
 import { DashboardComponent } from './dashboard.component';
+import { ProductComponent } from './product/product.component';
 import { ProfileComponent } from './profile/profile.component';
-import {ProductComponent} from './product/product.component';
 import { UploadimageComponent } from './uploadimage/uploadimage.component';
 
 const dashboardrouting:Routes=[
@@ -12,20 +13,22 @@ const dashboardrouting:Routes=[
     path:'dashboard',
     component:DashboardComponent,
     canActivate:[AuthGuard],
-    children:[{
+    children:[
+      {
         path:'profile',
         component:ProfileComponent
-    },
-    {
-      path:'product',
-      component:ProductComponent
-    },
-    {
-      path:'upload',
-      component:UploadimageComponent
-    }
-  ]
-  }
+      },
+      {
+        path:'product',
+        component:ProductComponent
+      },
+      {
+        path:'upload',
+        component:UploadimageComponent
+      },
+     
+    ]
+  },
 ]
 
 @NgModule({

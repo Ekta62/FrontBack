@@ -19,4 +19,4 @@ var productImageSchema = mongoose.Schema({
 
 })
 
-mongoose.model('productimage',productImageSchema);
+mongoose.model('productimage',productImageSchema);``

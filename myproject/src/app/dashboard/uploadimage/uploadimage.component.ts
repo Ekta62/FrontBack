@@ -24,7 +24,5 @@ export class UploadimageComponent implements OnInit {
     this.uploader.onCompleteItem = (item:any,response:any,status:any,header:any)=>{
       console.log("Image upload successfully:",item,status,response);
     }
-
-
    }
 }
